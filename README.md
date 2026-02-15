@@ -14,3 +14,8 @@ A comprehensive comparison of those tools helps build a reproducible benchmark t
 - DSSS
 - Blisqy
 - BBQSQL
+
+## To-do list:
+- Autoscan scripts
+- Result analyzing scripts
+- Docker error log analysis
