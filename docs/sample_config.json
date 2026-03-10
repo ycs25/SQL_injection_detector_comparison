@@ -1,0 +1,32 @@
+{
+  "environment": {
+    "juice_shop_docker": "http://localhost:3000",
+    "dvwa_docker": "http://localhost:8081",
+    "bwapp_docker": "http://localhost:8082",
+    "webgoat_docker": "http://localhost:8080/WebGoat"
+  },
+  "tools": {
+    "sqlmap": "YOUR_SQLMAP_PATH/sqlmap.py",
+    "dsss": "../tools/dsss.py"
+  },
+  "targets": {
+    "dvwa": {
+      "phpsessid": "YOURCOOKIES_PHPSESSID",
+      "request1": "../requests/dvwa/req1.txt",
+      "request2": "../requests/dvwa/req2.txt"
+    },
+    "juice_shop": {
+      "cookie": "",
+      "request_file": "../requests/juice_shop/req3.txt"
+    },
+    "bwapp": {
+      "phpsessid": "YOURCOOKIES_PHPSESSID",
+      "request_file": "../requests/bwapp/req1.txt"
+    },
+    "webgoat": {
+      "jsessid": "YOURCOOKIES_JSESSIONID",
+      "request1": "../requests/webgoat/req1.txt"
+    }
+  },
+  "output_raw": "../data/raw"
+}
