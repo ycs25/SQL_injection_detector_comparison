@@ -1,0 +1,18 @@
+PUT /WebGoat/SqlInjectionAdvanced/register HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,ja;q=0.6
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 107
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Host: localhost:8080
+Origin: http://localhost:8080
+Pragma: no-cache
+Referer: http://localhost:8080/WebGoat/start.mvc?username=sqlidetect
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+
+username_reg=tom&email_reg=a%40b&password_reg=123&confirm_password_reg=123

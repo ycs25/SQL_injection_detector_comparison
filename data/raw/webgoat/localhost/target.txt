@@ -1,0 +1,3 @@
+http://localhost:8080/WebGoat/SqlInjectionAdvanced/register (POST)  # "F:\Data Science\Information Security\sqlmap\sqlmap.py" -r "F:\Data Science\Information Security\SQL_injection_detector_comparison\scripts\..\requests\webgoat\req1.txt" --cookie=JSESSIONID=E4402A9F0EEE1468CAF1DD067908A3AE --technique=B --level 3 --batch "--output-dir=F:\Data Science\Information Security\SQL_injection_detector_comparison\scripts\..\data\raw\webgoat"
+
+username_reg=tom&email_reg=a@b&password_reg=123&confirm_password_reg=123

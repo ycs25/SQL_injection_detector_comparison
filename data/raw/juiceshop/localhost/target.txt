@@ -1,0 +1,3 @@
+http://localhost:3000/rest/user/login (POST)  # "F:\Data Science\Information Security\sqlmap\sqlmap.py" -r "F:\Data Science\Information Security\SQL_injection_detector_comparison\scripts\..\requests\juice_shop\req3.txt" --ignore-code 401 --level 2 --batch "--output-dir=F:\Data Science\Information Security\SQL_injection_detector_comparison\scripts\..\data\raw\sqlmap_juiceshop"
+
+{"email":"admin@juice-sh.op", "password":"123"}

