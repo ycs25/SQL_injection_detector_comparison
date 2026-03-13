@@ -1,0 +1,1 @@
+http://localhost:8082/sqli_17.php (POST) # ghauri -r F:\Data Science\Information Security\SQL_injection_detector_comparison\scripts\..\requests\bwapp\req1.txt --cookie=security_level=0; PHPSESSID=3lahne667j3ne6jhvv1gskefv3 --technique=ET --dbms mysql --batch
