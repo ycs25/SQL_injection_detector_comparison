@@ -4,7 +4,7 @@ $config = Get-Content (Join-Path $PSScriptRoot "..\config.json") | ConvertFrom-J
 # Environment
 $target = "juice_shop"
 $sqlmap_path = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot $config.tools.sqlmap))
-$request = Join-Path $PSScriptRoot $config.targets.$target.request_file
+$request = Join-Path $PSScriptRoot $config.targets.$target.request1
 $output_dir = Join-Path $PSScriptRoot $config.output_raw
 
 $url_search = $config.environment.juice_shop_docker + "/rest/products/search?q=apple"

