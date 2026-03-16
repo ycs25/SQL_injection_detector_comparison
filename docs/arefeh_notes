@@ -1,0 +1,15 @@
+# Arefeh Notes
+
+## Initial review
+I reviewed the documentation and checkbox summary.
+
+## Key observations
+- SQLmap shows the strongest detection coverage across most targets.
+- DSSS appears limited, especially for advanced and blind SQLi cases.
+- As security level increases, most tools fail except SQLmap in many cases.
+- Juice Shop seems harder for simpler tools because of its modern API/JSON-based architecture.
+
+## Next step
+- Review raw scan logs
+- Compare tool outputs
+- Analyze possible reasons for false negatives and tool disagreements
