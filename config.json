@@ -1,0 +1,14 @@
+{
+  "tools": {
+    "sqlmap": "..\\tools\\sqlmap\\sqlmap.py"
+  },
+  "environment": {
+    "dvwa_docker": "http://localhost:8081"
+  },
+  "targets": {
+    "dvwa": {
+      "phpsessid": "test"
+    }
+  },
+  "output_raw": "..\\data\\raw"
+}
