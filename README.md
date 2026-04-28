@@ -12,10 +12,4 @@ A comprehensive comparison of those tools helps build a reproducible benchmark t
 - SQLmap
 - JSQL Injection
 - DSSS
-- Blisqy
-- BBQSQL
-
-## To-do list:
-- Autoscan scripts
-- Result analyzing scripts
-- Docker error log analysis
+- Ghauri
