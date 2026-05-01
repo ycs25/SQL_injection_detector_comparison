@@ -13,3 +13,5 @@ A comprehensive comparison of those tools helps build a reproducible benchmark t
 - JSQL Injection
 - DSSS
 - Ghauri
+
+All the scan results are store in data/raw. All the scripts used to run tools and generate scan results are in scripts.
